@@ -1,83 +1,28 @@
-import { useState, useEffect } from 'react'
-import ReactPlayer from 'react-player'
-import { useSpring, animated } from '@react-spring/web'
-import { useDrag } from '@use-gesture/react'
-import Head from 'next/head'
-import Link from 'next/link'
-const img = '/draw.jpg'
-const calorieCam = '/calorieCam.mp4'
+
+
+import Head from 'next/head';
+import Footer from '../components/Footer';
+const img = '/draw.jpg';
+
 
 export default function Home() {
-  const [{ x, y }, api] = useSpring(() => ({ x: 0, y: 0 }))
-
-  const bind = useDrag(({ down, movement: [mx, my] }) => {
-    api.start({ x: down ? mx : 0, y: down ? my : 0, immediate: down })
-  })
-
-
   return (
     <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&family=Noto+Sans+Mono:wght@300&family=Noto+Sans:wght@700&display=swap" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/55e3b7e98a.js" crossorigin="anonymous"></script>
-      </Head>
-
+        <Head>
+            <title>Create Next App</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&family=Noto+Sans+Mono:wght@300&family=Noto+Sans:wght@700&display=swap" rel="stylesheet" />
+            <script src="https://kit.fontawesome.com/55e3b7e98a.js" crossorigin="anonymous"></script>
+        </Head>
       <main>
         <div className="image" />
-        {/* <h1 className="title" style={{ position: 'absolute', top: 0 }}>Modern Architect</h1> */}
-        <animated.div 
-          {...bind()} 
-          style={{ 
-              x, 
-              y, 
-              height: 900, 
-              width: 900, 
-              backgroundColor: 'white', 
-              borderRadius: 5, 
-              position: 'absolute', 
-              top: 30, 
-              right: 30,
-              padding: 20, 
-              display: 'flex',
-              // flexDirection: 'column'
-            }}>
-            <ReactPlayer
-            className='react-player fixed-bottom'
-            url= '/calorieCam.mp4'
-            width='100%'
-            height='100%'
-            controls = {false}
-            playing={true} 
-
-            loop={true}
-
-            />
-              <div style={{ flex: 2, padding: 10 }}>
-              <span className="description">Calorie Cam</span>
-              <span className="subtext">A simple calorie counting app. Features image recognition, food logging, and micronutrient information. No sign up or log-in required.</span>
-              <i className="fab fa-app-store-ios" style={{ color: 'purple' }} />
-            </div>
-          </animated.div>
           <div>
             <p className="description" style={{ color: 'white'}}>A digital nomad with a passion for design</p>
           </div>
-          {/* <div style={{ height: 2000 }} /> */}
       </main>
-
-      {/* <footer> */}
-        {/* <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        > */}
-          {/* Powered by{' '} */}
-          {/* <img src="/vercel.svg" alt="Vercel" className="logo" /> */}
-        {/* </a> */}
-      {/* </footer> */}
+      {/* <Footer /> */}
 
       <style jsx>{`
         .container {
