@@ -1,3 +1,30 @@
-.red {
-    color: red;
+.heading {
+    display: block;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
+
+.description {
+    line-height: 1.5;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    color: grey;
+}
+
+.bg {
+    background-color: #969696;
+}
+
+.card {
+    height: 900;
+    width: 300;
+    background-color: #969696;
+    border-radius: 5;
+    position: absolute;
+    top: 30;
+    right: 30;
+    padding: 20;
+    display: flex;
 }

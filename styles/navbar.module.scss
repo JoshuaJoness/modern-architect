@@ -1,0 +1,18 @@
+.container {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 25vw;
+    justify-content: space-between;
+}
+
+.link a {
+    text-decoration: none;
+    color: #000;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: #67697C;
+    font-family: Noto Sans, sans-serif;
+}

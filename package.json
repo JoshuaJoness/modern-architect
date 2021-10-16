@@ -9,18 +9,26 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.3.0",
+    "@react-three/drei": "^7.15.1",
+    "@react-three/fiber": "^7.0.16",
+    "@types/next": "^9.0.0",
+    "@types/node": "^16.11.0",
+    "@types/react-dom": "^17.0.9",
+    "@types/three": "^0.133.1",
     "@use-gesture/react": "^10.0.3",
     "@zeit/next-sass": "^1.0.1",
+    "drei": "^2.2.21",
     "next": "^11.0.0",
     "next-images": "^1.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-player": "^2.9.0",
-    "sass": "^1.43.2"
+    "sass": "^1.43.2",
+    "three": "^0.133.1"
   },
   "devDependencies": {
-    "@types/react": "^17.0.27",
+    "@types/react": "^17.0.30",
     "eslint-plugin-react": "^7.26.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.4"
   }
 }

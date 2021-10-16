@@ -11,7 +11,7 @@ const Projects = () => {
     })
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#000' }}>
             <animated.div 
                 {...bind()} 
                 style={{ 
@@ -38,8 +38,8 @@ const Projects = () => {
                 loop={true}
             />
               <div style={{ flex: 2, padding: 10 }}>
-              <span /* className="description" */ className={styles.red}>Calorie Cam</span>
-              <span className="subtext">A simple calorie counting app. Features image recognition, food logging, and micronutrient information. No sign up or log-in required.</span>
+              <span className={styles.heading}>Calorie Cam</span>
+              <span className={styles.description}>A simple calorie counting app. Features image recognition, food logging, and micronutrient information. No sign up or log-in required.</span>
               <i className="fab fa-app-store-ios" style={{ color: 'purple' }} />
             </div>
           </animated.div>

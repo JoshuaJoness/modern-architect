@@ -1,0 +1,20 @@
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../public/draw.jpg');
+    z-index: -1;
+}
