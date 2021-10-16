@@ -1,63 +1,83 @@
+import { useState, useEffect } from 'react'
+import ReactPlayer from 'react-player'
+import { useSpring, animated } from '@react-spring/web'
+import { useDrag } from '@use-gesture/react'
 import Head from 'next/head'
+import Link from 'next/link'
+const img = '/draw.jpg'
+const calorieCam = '/calorieCam.mp4'
 
 export default function Home() {
+  const [{ x, y }, api] = useSpring(() => ({ x: 0, y: 0 }))
+
+  const bind = useDrag(({ down, movement: [mx, my] }) => {
+    api.start({ x: down ? mx : 0, y: down ? my : 0, immediate: down })
+  })
+
+
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&family=Noto+Sans+Mono:wght@300&family=Noto+Sans:wght@700&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/55e3b7e98a.js" crossorigin="anonymous"></script>
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className="image" />
+        {/* <h1 className="title" style={{ position: 'absolute', top: 0 }}>Modern Architect</h1> */}
+        <animated.div 
+          {...bind()} 
+          style={{ 
+              x, 
+              y, 
+              height: 900, 
+              width: 900, 
+              backgroundColor: 'white', 
+              borderRadius: 5, 
+              position: 'absolute', 
+              top: 30, 
+              right: 30,
+              padding: 20, 
+              display: 'flex',
+              // flexDirection: 'column'
+            }}>
+            <ReactPlayer
+            className='react-player fixed-bottom'
+            url= '/calorieCam.mp4'
+            width='100%'
+            height='100%'
+            controls = {false}
+            playing={true} 
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+            loop={true}
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            />
+              <div style={{ flex: 2, padding: 10 }}>
+              <span className="description">Calorie Cam</span>
+              <span className="subtext">A simple calorie counting app. Features image recognition, food logging, and micronutrient information. No sign up or log-in required.</span>
+              <i className="fab fa-app-store-ios" style={{ color: 'purple' }} />
+            </div>
+          </animated.div>
+          <div>
+            <p className="description" style={{ color: 'white'}}>A digital nomad with a passion for design</p>
+          </div>
+          {/* <div style={{ height: 2000 }} /> */}
       </main>
 
-      <footer>
-        <a
+      {/* <footer> */}
+        {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+        > */}
+          {/* Powered by{' '} */}
+          {/* <img src="/vercel.svg" alt="Vercel" className="logo" /> */}
+        {/* </a> */}
+      {/* </footer> */}
 
       <style jsx>{`
         .container {
@@ -67,6 +87,18 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          background-image: url(${img});
+          z-index: -1;
         }
 
         main {
@@ -102,9 +134,9 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
+        .title {
           text-decoration: none;
+          font-family: 'Merriweather', serif;
         }
 
         .title a:hover,
@@ -127,6 +159,16 @@ export default function Home() {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+          font-family: 'Noto Sans', sans-serif;
+          font-weight: 700;
+          display: block;
+        }
+
+        .subtext {
+          line-height: 1.5;
+          font-family: 'Noto Sans', sans-serif;
+          font-weight: 400;
+          color: grey;
         }
 
         code {
