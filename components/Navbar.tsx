@@ -20,7 +20,7 @@ export default ({ mobile }) => (
         </a>
         <a>
             <Link href="#contact">
-                {/* <FontAwesomeIcon icon={faEnvelopeOpen} style={{ fontSize: 30, color: 'white' }} /> */}
+                {/* <FontAwesomeIcon icon={faEnvelopeOpen} style={{ fontSize: 30, color: 'white' }} /> */ }
                 <span>CONTACT</span>
             </Link>
         </a>
