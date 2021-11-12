@@ -1,27 +1,27 @@
 import Link from 'next/link';
-import { faCode, faEnvelopeOpen, faHome } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCode, faEnvelopeOpen, faHome } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/navbar.module.scss';
 
 export default ({ mobile }) => (
     mobile ? 
     <div className={styles.containerMobile}>
-        <a className={styles.link}>
+        <a>
             <Link href="#home" className={styles.link}>
-            <FontAwesomeIcon icon={faHome} style={{ fontSize: 30, color: 'white' }} />
+            {/* <FontAwesomeIcon icon={faHome} style={{ fontSize: 30, color: 'white' }} /> */}
+            <span>HOME</span>
             </Link>
         </a>
-        <a className={styles.link}>
+        <a>
             <Link href="#code" className={styles.link}>
-                <div style={{ display: 'flex', flexDirection: 'column', fontSize: 30, color: 'white' }}>
-                    <FontAwesomeIcon icon={faCode}  />
-                    {/* <label style={{ fontSize: 32 }}>code</label> */}
-                </div>
+                    {/* <FontAwesomeIcon icon={faCode}  /> */}
+                    <span>CODE</span>
             </Link>
         </a>
-        <a className={styles.link}>
+        <a>
             <Link href="#contact" className={styles.link}>
-                <FontAwesomeIcon icon={faEnvelopeOpen} style={{ fontSize: 30, color: 'white' }} />
+                {/* <FontAwesomeIcon icon={faEnvelopeOpen} style={{ fontSize: 30, color: 'white' }} /> */}
+                <span>CONTACT</span>
             </Link>
         </a>
     </div>
