@@ -769,7 +769,8 @@
   "nodes": [
     {
       "children": [1],
-      "name": "RootNode (gltf orientation matrix)"
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [-0.70710678118654746, -0, -0, 0.70710678118654757]
     },
     {
       "children": [2],

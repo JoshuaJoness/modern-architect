@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "CreativeVintageDraft";
+    src: url("/fonts/CreativeVintage/CreativeVintageDraft-BP.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CreativeVintageRegular";
+    src: url("/fonts/CreativeVintage/CreativeVintageRegular-BP.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FabulousScript-Bold";
+    src: url("/fonts/FabulousScript/FabulousScript-Bold.ttf");
+    font-style: medium;
+    font-weight: 700;
+    font-display: swap;
+}
+
+.container {
+    background-color: #000;
+    padding: 100px;
+}
+
+// .image {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100%;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-image: url('../public/mountain.jpg');
+//     z-index: -1;
+// }
+
+.title {
+    text-decoration: none;
+    font-size: 96px;
+    text-transform: capitalize;
+    color: #67697C;
+    font-family: CreativeVintageDraft, sans-serif;
+
+    &:hover {
+        color: #fff;
+        // TODO add transition
+    }
+}
+
+.whoAmI {
+    font-size: 96px;
+    text-transform: capitalize;
+    color:pink;
+    font-family: CreativeVintageDraft, sans-serif;
+    align-self: center;
+    margin: 100px 0 50px 0;
+}
+
+.description {
+    font-size: 96px;
+    color:white;
+    font-family: CreativeVintageDraft, sans-serif;
+}

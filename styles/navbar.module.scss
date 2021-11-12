@@ -2,9 +2,8 @@
     list-style-type: none;
     position: absolute;
     top: 0;
-    left: 0;
     display: flex;
-    width: 25vw;
+    width: -webkit-fill-available;
     justify-content: space-between;
 }
 
@@ -14,5 +13,53 @@
     font-size: 32px;
     text-transform: capitalize;
     color: #67697C;
-    font-family: Noto Sans, sans-serif;
+    font-family: 'FabulousScript-Bold', sans-serif;
+
+    &:hover {
+        color: pink;
+        // TODO add transition
+    }
+}
+
+.joshuaJones a {
+    text-decoration: none;
+    font-size: 96px;
+    text-transform: capitalize;
+    color: #67697C;
+    font-family: CreativeVintageDraft, sans-serif;
+    margin: 50px;
+
+    &:hover {
+        color: pink;
+        // TODO add transition
+    }
+}
+
+.joshuaJonesMobile a {
+    font-size: 22px;
+    font-family: CreativeVintageDraft, sans-serif;
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: auto;
+
+    // &:hover {
+    //     color: pink;
+    //     // TODO add transition
+    // }
+}
+
+.containerMobile {
+    list-style-type: none;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    margin: 0;
+    background-color: #333;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 50px;
+    z-index: 9999;
 }

@@ -1,15 +1,27 @@
-.heading {
+.title {
+    text-decoration: none;
+    font-size: 96px;
+    text-transform: capitalize;
+    color:pink;
+    font-family: CreativeVintageDraft, sans-serif;
     display: block;
-    line-height: 1.5;
-    font-size: 1.5rem;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 700;
+    text-align: center;
 }
 
 .description {
-    line-height: 1.5;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
+    font-family: CreativeVintageRegular, sans-serif;
+    font-size: 32px;
+    color: white;
+}
+
+.highlight {
+    font-family: CreativeVintageRegular, sans-serif;
+    color: pink;
+}
+
+.bullet { // TODO delete
+    font-family: CreativeVintageRegular, sans-serif;
+    font-size: 22px;
     color: grey;
 }
 
@@ -22,9 +34,8 @@
     width: 300;
     background-color: #969696;
     border-radius: 5;
-    position: absolute;
-    top: 30;
-    right: 30;
-    padding: 20;
+    // position: absolute;
+    // top: 30;
+    // right: 30;
     display: flex;
 }

@@ -1,20 +1,72 @@
-.container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@font-face {
+    font-family: "CreativeVintageDraft";
+    src: url("/fonts/CreativeVintage/CreativeVintageDraft-BP.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CreativeVintageRegular";
+    src: url("/fonts/CreativeVintage/CreativeVintageRegular-BP.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FabulousScript-Bold";
+    src: url("/fonts/FabulousScript/FabulousScript-Bold.ttf");
+    font-style: medium;
+    font-weight: 700;
+    font-display: swap;
 }
 
 .image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 100%;
+    overflow: hidden;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: url('../public/draw.jpg');
+    background-repeat: no-repeat;
+    background-image: url('../public/mountain.jpg');
     z-index: -1;
+}
+
+.imageTwo {
+    overflow: hidden;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../public/images/leap_of_faith.jpg');
+    z-index: -1;
+}
+
+.title {
+    text-decoration: none;
+    font-size: 96px;
+    text-transform: capitalize;
+    color: #67697C;
+    font-family: CreativeVintageDraft, sans-serif;
+
+    &:hover {
+        color: #fff;
+        // TODO add transition
+    }
+}
+
+.description {
+    font-size: 96px;
+    color:darkgray;
+    font-family: CreativeVintageDraft, sans-serif;
 }

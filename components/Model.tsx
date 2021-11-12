@@ -40,11 +40,15 @@ const Model = () => {
   useEffect(() => {
     const loader = new GLTFLoader();
     loader.load("scene.gltf", async (gltf) => {
+
+      console.log(gltf, 'GLTF')
+
       const nodes = await gltf.parser.getDependencies("node");
       const animations = await gltf.parser.getDependencies("animation");
       // await gltf.scene.scale.set(100,100,100) 
 
-      gltf.scene.scale.set(0.03, 0.03, 0.03);
+      // gltf.scene.scale.set(0.03, 0.03, 0.03);
+
 
       setModel(nodes[0]);
       setAnimation(animations);
@@ -54,21 +58,29 @@ const Model = () => {
   /* Set animation */
   useEffect(() => {
     if (animation && typeof group.current != "undefined") {
-
-      console.log(mixer.clipAction, 'MIXER')
+      console.log(animation, 'ANIMATION')
+      console.log(group.current, 'group.current')
+      if (model) {
+        model.rotation.order = ""; /* This did something... set model 'up-right' */
+        // TODO here, trying to stop model from rotating when animations are loaded...
+        // model.rotation.x = 0;
+        // model.rotation.y = 0;
+        // model.rotation.z = 0;
+      }
+      // console.log(mixer.clipAction, 'MIXER')
 
       // actions.current = {
       //   idle: mixer.clipAction(animation[0], group.current as Object3D),
       // };
       // actions.current.idle.play();
       // TODO, above is causing crash... do I need this? It seems to be some sort of animation
-      return () => animation.forEach((clip) => mixer.uncacheClip(clip));
+      // return () => animation.forEach((clip) => mixer.uncacheClip(clip));
     }
   }, [animation]);
 
-  useEffect(() => {
-    console.log(model,'model')
-  }, [model])
+  // useEffect(() => {
+  //   console.log(model,'model')
+  // }, [model])
 
   /* Animation update */
   useFrame((_, delta) => mixer.update(delta));

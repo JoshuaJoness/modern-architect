@@ -1,0 +1,141 @@
+.aboutContainer {
+    padding: 25vh 100px;
+    font-size: 32px;
+    font-family: CreativeVintageDraft, sans-serif;
+    width: 60vw;
+    margin: 100vh auto 0 auto;
+}
+
+.aboutContainerMobile {
+    margin-top: 100vh;
+    color: grey;
+    padding-top: 60px;
+    font-family: CreativeVintageDraft, sans-serif;
+}
+
+.calorieCamContainer {
+    background-color: grey;
+    padding: 100px;
+    color: #fff;
+    font-family: CreativeVintageDraft, sans-serif;
+
+    a {
+        word-break: break-word;
+        font-size: 24px;
+        color: pink;
+        &:hover {
+            color: #333;
+            opacity: 0.5;
+        }
+    }
+}
+
+.calorieCamContainerMobile {
+    background-color: grey;
+    color: #fff;
+    font-family: CreativeVintageDraft, sans-serif;
+    padding-top: 80px;
+    padding-bottom: 160px;
+
+    a {
+        word-break: break-word;
+        font-size: 18px;
+        color: pink;
+        &:hover {
+            color: #333;
+        }
+    }
+}
+
+.zenChatContainer {
+    background-color: white;
+    font-family: CreativeVintageDraft, sans-serif;
+    a {
+        word-break: break-word;
+        font-size: 24px;
+        color: grey;
+        &:hover {
+            color: pink;
+        }
+    }
+}
+
+.zenChatContainerMobile {
+    background-color: white;
+    font-family: CreativeVintageDraft, sans-serif;
+    a {
+        word-break: break-word;
+        font-size: 18px;
+        color: grey;
+        &:hover {
+            color: pink;
+        }
+    }
+}
+
+.title {
+    text-decoration: none;
+    font-size: 96px;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    font-family: CreativeVintageDraft, sans-serif;
+}
+
+.titleMobile {
+    text-decoration: none;
+    font-size: 50px;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    font-family: CreativeVintageDraft, sans-serif;
+}
+
+.description {
+    font-size: 32px;
+    width: 40vw;
+    padding-right: 10%;
+    line-height: 2;
+}
+
+.descriptionMobile {
+    font-size: 22px;
+    padding-right: 10%;
+    line-height: 2;
+}
+
+.aboutHighlight {
+    color: #fff;
+}
+
+.calorieCamHighlight {
+    color: pink;
+}
+
+.contactList {
+    line-height: 1.5;
+    text-align: start;
+    margin-left: 25px;
+    li {
+        list-style: none;
+        color: lightgrey;
+    }
+}
+
+.contactListMobile {
+    line-height: 1.5;
+    text-align: start;
+    li {
+        list-style: none;
+        color: lightgrey;
+    }
+    a {
+        text-decoration: none;
+        word-break: break-word;
+        font-size: 18px;
+        color: grey;
+        &:hover {
+            color: pink;
+        }
+    }
+}
