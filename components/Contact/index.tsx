@@ -1,6 +1,6 @@
 import React from 'react';
-import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../../styles/styles.module.scss';
 
 const Contact = ({ mobile }) => (

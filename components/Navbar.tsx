@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { faCode, faEnvelopeOpen, faHome } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faEnvelopeOpen, faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/navbar.module.scss';
 
 export default ({ mobile }) => (
