@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Canvas } from '@react-three/fiber';
 import Navbar from '../components/Navbar';
-// import Cards from '../components/Cards';
 import Lights from '../components/Lights';
 import Model from '../components/Model';
 import Footer from '../components/Footer';
