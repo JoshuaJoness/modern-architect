@@ -7,19 +7,19 @@ export default ({ mobile }) => (
     mobile ? 
     <div className={styles.containerMobile}>
         <a>
-            <Link href="#home" className={styles.link}>
+            <Link href="#home">
             {/* <FontAwesomeIcon icon={faHome} style={{ fontSize: 30, color: 'white' }} /> */}
             <span>HOME</span>
             </Link>
         </a>
         <a>
-            <Link href="#code" className={styles.link}>
+            <Link href="#code">
                     {/* <FontAwesomeIcon icon={faCode}  /> */}
                     <span>CODE</span>
             </Link>
         </a>
         <a>
-            <Link href="#contact" className={styles.link}>
+            <Link href="#contact">
                 {/* <FontAwesomeIcon icon={faEnvelopeOpen} style={{ fontSize: 30, color: 'white' }} /> */}
                 <span>CONTACT</span>
             </Link>
@@ -35,17 +35,17 @@ export default ({ mobile }) => (
         <li style={{ alignSelf: 'center', width: '25vw', display: 'flex', justifyContent: 'space-between', marginRight: 200 }}>
             <li>
                 <a className={styles.link}>
-                    <Link href="#about" className={styles.link}>About</Link>
+                    <Link href="#about">About</Link>
                 </a>
             </li>
             <li>
                 <a className={styles.link}>
-                    <Link href="#code" className={styles.link}>Code</Link>
+                    <Link href="#code">Code</Link>
                 </a>
             </li>
             <li>
                 <a className={styles.link}>
-                    <Link href="#contact" className={styles.link}>Contact</Link>
+                    <Link href="#contact">Contact</Link>
                 </a>
             </li>
         </li>
