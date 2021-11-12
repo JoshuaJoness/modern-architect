@@ -1,6 +1,6 @@
 import React from 'react';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCode } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../../styles/styles.module.scss';
 
 const Contact = ({ mobile }) => (
@@ -24,16 +24,16 @@ const Contact = ({ mobile }) => (
                 <li style={{ fontSize: mobile ? 28 : 36, color: 'grey' }}>Joshua Jones</li>
                 <li style={{ fontSize: mobile ? 16 :18, color: 'pink', marginBottom: mobile ? 10 : 25 }}>Creative Fullstack Developer</li>
                 <li style={{ textTransform: 'none', marginBottom: 5, fontSize: mobile ? 18 : undefined }}>joshuajonesdev@gmail.com</li>
-                {mobile ? <li style={{ textTransform: 'none', marginBottom: 5, fontSize: mobile ? 18 : undefined }}>
+                {/* {mobile ?  */}<li style={{ textTransform: 'none', marginBottom: 5, fontSize: mobile ? 18 : undefined }}>
                 <a href="https://github.com/JoshuaJoness" target="_blank">
                         GitHub
                     </a>
-                </li> : null}
-                {mobile ? null : <li>
+                </li> {/* : null} */}
+                {/* {mobile ? null : <li>
                     <a href="https://github.com/JoshuaJoness" target="_blank">
                         <FontAwesomeIcon icon={faCode} style={{ fontSize: 22, color: 'lightgrey' }} />
                     </a>
-                </li>}
+                </li>} */}
             </ul>
             {/* <div className={styles.imageTwo} /> */}
         </div>
