@@ -18,9 +18,9 @@ const ZenChat = ({ mobile }) => (
                 style={{ display:'block', margin: 'auto' }}
                 muted
             />
-            <p className={mobile ? styles.descriptionMobile : styles.description} style={{ color: '#333', width: '60vw', margin: '75px auto', textAlign: 'center' }}>
+            <p className={mobile ? styles.descriptionMobile : styles.description} style={{ color: '#333', width: '60vw', margin: '75px auto' }}>
             A chat app built with <span style={{ color: 'yellowGreen' }}>React</span>, <span style={{ color: 'yellowGreen' }}>Node</span>, and <span style={{ color: 'yellowGreen' }}>web sockets</span>.
-            Join one of our many rooms or create your own. 🧘‍♂️
+            Join one of our many rooms or create your own. <br />🧘‍♂️
             <br/><br/>
             <span style={{ color: '#333' }}>Visit: </span>
             <a href="https://zenchaat.herokuapp.com/" target="_blank">https://zenchaat.herokuapp.com/</a>
